@@ -10,6 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+           let maxi = arr[0];
+			let mini = Number.NEGATIVE_INFINITY;
+			for(let i =0;i<arr.length;i++){
+			    if(arr[i]>maxi){
+					maxi = arr[i];
+					mini = maxi;
+				}
+				if(arr[i]<maxi){
+					mini = Math.max(arr[i],mini);
+				}
+			}
+			return mini;
 			
 		}
 
